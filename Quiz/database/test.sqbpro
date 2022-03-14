@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/nikolay/Downloads/DB-Leak-2 [v0g3lSec]/db1.sqlite3" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="8648"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,3:mainapp"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">SELECT count(gender) FROM employees_2
+WHERE gender = 'Male'</sql><sql name="SQL 2">SELECT avg(salary) FROM employees_2
+WHERE department_id = 110</sql><sql name="SQL 3">SELECT random() </sql><sql name="SQL 4">SELECT abs(-200)</sql><sql name="SQL 5">SELECT upper(email) from employees_2;
+</sql><sql name="SQL 6">SELECT email, length(email) as длина from employees_2;
+</sql><sql name="SQL 7">SELECT first_name || &quot; &quot; || last_name as 'user_name', tel from employees_2;
+</sql><sql name="SQL 8">SELECT first_name, last_name, departments.description FROM employees
+WHERE department_id = 105
+
+JOIN departments on employees.department_id = departments.id
+ORDER BY department_id
+</sql><sql name="SQL 9">SELECT * FROM employees
+WHERE salary  BETWEEN 3000 AND (
+	SELECT max(salary) - 1000 FROM employees
+
+)
+
+</sql><sql name="SQL 10">SELECT sum(salary) FROM employees
+WHERE department_id = 101</sql><sql name="SQL 11">SELECT * FROM employees LIMIT 100</sql><sql name="SQL 12">SELECT department_id, sum(salary) FROM employees GROUP BY department_id
+ORDER BY department_id ASC</sql><current_tab id="11"/></tab_sql></sqlb_project>
